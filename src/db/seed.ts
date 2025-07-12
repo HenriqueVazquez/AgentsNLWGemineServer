@@ -13,8 +13,19 @@ await seed(db, schema).refine((f) => {
       columns: {
         name: f.companyName(),
         description: f.loremIpsum(),
+        createdAt: f.date({ minDate: "2025-01-01T08:00:00Z", maxDate: "2025-07-12T17:59:59Z" })
       },
+      with: {
+        questions: 1
+      }
     },
+    questions: {
+      columns: {
+        question: f.loremIpsum(),
+        answer: f.loremIpsum(),
+        createdAt: f.date({ minDate: "2025-01-01T08:00:00Z", maxDate: "2025-07-12T17:59:59Z" })
+      }
+    }
   }
 });
 
