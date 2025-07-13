@@ -4,7 +4,7 @@ Projeto desenvolvido por **Henrique Vazquez** durante o evento da Rocketseat.
 
 ## 📝 Descrição
 
-API para gerenciamento de salas (rooms), perguntas e upload de áudios, utilizando Fastify, Drizzle ORM e PostgreSQL.
+API para gerenciamento de salas (rooms), perguntas e upload de áudios, utilizando Fastify, Drizzle ORM e PostgreSQL. Utiliza o Gemini para transcrever áudios, gerar embeddings e responder perguntas de acordo com o contexto.
 
 ## 🛠️ Tecnologias e Bibliotecas Principais
 
@@ -17,7 +17,7 @@ API para gerenciamento de salas (rooms), perguntas e upload de áudios, utilizan
 - 🛡️ **zod**: Validação de esquemas e variáveis de ambiente
 - 🔗 **fastify-type-provider-zod**: Integração de validação Zod com Fastify
 - 🧰 **drizzle-kit**: Ferramentas de migrations e seed para Drizzle ORM
-- 🤖 **@google/genai**: Integração com IA generativa (Google)
+- 🤖 **@google/genai**: Integração com IA generativa (Google Gemini)
 
 ## 📐 Padrões de Projeto
 
