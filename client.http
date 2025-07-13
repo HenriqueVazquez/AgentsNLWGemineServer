@@ -20,11 +20,11 @@ Content-Type: application/json
 }
 
 ###
-
+# @no-log
 @roomId = {{getRooms.response.body.$.[0].id}}
 
 ###
-
+# @no-log
 @createdRoomId = {{createRoom.response.body.$.roomId}}
 
 ###
@@ -34,10 +34,11 @@ GET {{baseUrl}}/rooms/{{roomId}}/questions
 
 ### Create Questions
 # @name createQuestion
-POST {{baseUrl}}/rooms/{{createdRoomId}}/questions
+# POST {{baseUrl}}/rooms/{{createdRoomId}}/questions
+POST {{baseUrl}}/rooms/6b70810c-74ff-4ce9-2665-dbe392f0610b/questions
 Accept: application/json
 Content-Type: application/json
 
 {
-  "question": "Opa, gostei do seu curriculum"
+  "question": "O que é react?"
 }
